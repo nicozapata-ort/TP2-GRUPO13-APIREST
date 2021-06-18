@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "casoDeUso_BuscarLibro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "set GOOGLE_APPLICATION_CREDENTIALS=C:/Users/nicol/Desktop/cred/milibro-5be72d2cfe2c.json&& nodemon ./test/compartidos/servidor/testServidorBuscarLibro.test.js",
+    "test": "nodemon test/compartidos/servidor/testServidorInfoLibro.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^2.3.2",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.6.1",
+    "pdfmake": "^0.1.71"
+  }
+}
