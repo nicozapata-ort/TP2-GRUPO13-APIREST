@@ -4,7 +4,7 @@ import { crearGeneradorDeRutaPdf } from './creadorDeRutaPdf.js'
 
 /**** Creacion del modulo generador de PDF *************/ 
 /*** Titulo */
-const encabezadoTitulo = 'Libro Favorito';
+const encabezadoTitulo = 'Mi Libro Encontrado';
 /*** fecha */
 const formatFecha = f => f.getFullYear() + '/' + ("0" + (f.getMonth() + 1)).slice(-2) + '/' + ("0" + f.getDate()).slice(-2) 
 const fechaString = formatFecha(new Date ())

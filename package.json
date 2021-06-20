@@ -6,7 +6,10 @@
   "main": "main.js",
   "scripts": {
     "start": "set GOOGLE_APPLICATION_CREDENTIALS=C:/Users/nicol/Desktop/cred/milibro-5be72d2cfe2c.json&& nodemon ./test/compartidos/servidor/testServidorBuscarLibro.test.js",
-    "test": "nodemon test/compartidos/servidor/testServidorInfoLibro.test.js"
+    "test": "nodemon test/compartidos/servidor/testServidorInfoLibro.test.js",
+    "testservwei": "node test/compartidos/servidor/testServidorInfoLibro.test.js",
+    "testcuwei": "node test/libros/negocio/testCasoDeUsoInfoLibro.test.js",
+    "testdaowei": "node test/compartidos/servidor/testUsuarioPersistencia.test.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongodb": "^3.6.9",
     "node-fetch": "^2.6.1",
     "nodemailer": "^6.6.1",
     "pdfmake": "^0.1.71"

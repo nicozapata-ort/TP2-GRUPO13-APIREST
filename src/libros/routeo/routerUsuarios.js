@@ -1,7 +1,7 @@
 import express from "express";
 import Factory_Crear_CU_Favoritos from "../negocio/factoryCuFavoritos.js";
 import CUFactoryInfoLibro from '../negocio/factoryCuInfoLibro.js'
-
+import {cu_altaUsuario}  from '../negocio/cuAltaUsuario.js'
 
 
 const routerUsuario = express.Router()
@@ -24,6 +24,16 @@ routerUsuario.post('/infoLibroPdfMail/:idUsuario', async (req, res, next) => {
         const CasoDeUso_infoLibroPorMail = CUFactoryInfoLibro.crearCU_enviarInfoLibro()
         await CasoDeUso_infoLibroPorMail.ejecutar(req.body, req.params.idUsuario)
         res.json({ msg: 'ok' })
+    } catch (err) {
+        next(err)
+    }
+})
+
+
+routerUsuario.post('/registrarUsuario', async (req, res, next) => {
+    try {
+        await cu_altaUsuario().cargar(req.body)
+        res.json({ msg: 'ok usuario insertado' })
     } catch (err) {
         next(err)
     }
