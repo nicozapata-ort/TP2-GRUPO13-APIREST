@@ -1,10 +1,10 @@
-import {crearDaoUsuarioCache}  from '../persistencia/daoUsuario.js'
 import {CU_infoLibroPdfporMail}  from   './cuInfoLibro.js'
 import {crearFactoryGenPdf} from  '../../compartidos/moduloPdfs/FactoryGenPdf.js'
 import {crearFactoryMailer_Sender} from  '../../compartidos/moduloMail/factoryMailerSender.js'
+import factoryDaoUsuario from '../persistencia/factoryDaoUsuario.js'
 
 /**** Creacion del Dao *********************************/
-const daoUsuario = crearDaoUsuarioCache()
+const daoUsuario = await factoryDaoUsuario.getDaoUsuarios()
 
 /****MAILSender */
 const sender = await crearFactoryMailer_Sender().generarMail_sender()

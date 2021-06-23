@@ -1,7 +1,7 @@
 import express from "express";
 import Factory_Crear_CU_Favoritos from "../negocio/factoryCuFavoritos.js";
 import CUFactoryInfoLibro from '../negocio/factoryCuInfoLibro.js'
-
+import {cu_altaUsuario}  from '../negocio/cuAltaUsuario.js'
 
 
 const routerUsuario = express.Router()
@@ -30,8 +30,19 @@ routerUsuario.post('/infoLibroPdfMail/:idUsuario', async (req, res, next) => {
 })
 
 
+routerUsuario.post('/registrarUsuario', async (req, res, next) => {
+    try {
+        console.log("route-user:",req.body)
+        await cu_altaUsuario().cargar(req.body)
+        res.json({ msg: 'ok usuario insertado' })
+    } catch (err) {
+        next(err)
+    }
+})
+
+
 routerUsuario.use((error, req, res, next) => {
-    if (error.type === 'ERROR_DATOS_INVALIDOS') {
+    if ((error.type === 'ERROR_DATOS_INVALIDOS') || (error.type === 'ERROR_FAVORITO_INVALIDO')) {
         res.status(400)
     } else if (error.type === 'ERROR_USUARIO_NO_ENCONTRADO') {
         res.status(404)

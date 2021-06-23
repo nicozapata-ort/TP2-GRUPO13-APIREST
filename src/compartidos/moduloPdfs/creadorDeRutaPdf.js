@@ -4,7 +4,7 @@ function crearGeneradorDeRutaPdf(){
         generarRutaPdf: (salidaPdf) => {
             const fecha = Date.now()
             return {
-                nombreSalidaPdf : `/${fecha}-${salidaPdf}.pdf`
+                nombreSalidaPdf : `/src/compartidos/assets/salidaPdf/${fecha}-${salidaPdf}.pdf`
                 
             }
         }
