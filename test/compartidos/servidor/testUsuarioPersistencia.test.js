@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { crearServidor } from '../../../src/compartidos/servidor/servidor.js'
 // import factoryDaoUsuario from '../../../src/libros/persistencia/factoryDaoUsuario.js'
-import {cerrarConexion} from '../../../src/libros/persistencia/cleinteMongoCierre.js'
+import {cerrarConexion} from '../../../src/libros/persistencia/mongo/clienteMongoCierre.js'
 
     const usuarios1 = {
-        id: 10,
-        nombre: 'locura10',
-        usuarioEmail: 'locura10@gmail.com'
+        id: 1,
+        nombre: 'locura1',
+        usuarioEmail: 'locura1@gmail.com'
     }
 
     const servidor = crearServidor()

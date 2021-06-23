@@ -1,4 +1,4 @@
-import DaoFactory from './factoryDaoUsuario.js'
+import DaoFactory from '../factoryDaoUsuario.js'
 
 function cerrarConexion(){
     const clienteMongo = DaoFactory.getClienteMongo()

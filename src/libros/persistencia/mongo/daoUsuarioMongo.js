@@ -1,5 +1,5 @@
-import { crearErrorUsuarioNoEncontrado } from '../errores/errorUsuarioNoEncontrado.js'
-import { crearUsuarioValido } from '../modelos/usuario.js'
+import { crearErrorUsuarioNoEncontrado } from '../../errores/errorUsuarioNoEncontrado.js'
+import { crearUsuarioValido } from '../../modelos/usuario.js'
 
 function crearDaoUsuarioMongo(dbMongo) {
 

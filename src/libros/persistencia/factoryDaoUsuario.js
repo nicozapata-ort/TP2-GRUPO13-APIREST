@@ -6,8 +6,8 @@ let clienteMongo
 switch (getMode()) {
   case 'PROD':
     console.log("FACTORY DAO - PRODUCCION")
-    const { crearClienteMongoDb } = await import('./clienteMongo.js')
-    const { crearDaoUsuarioMongo } = await import('../persistencia/daoUsuarioMongo.js')
+    const { crearClienteMongoDb } = await import('./mongo/clienteMongo.js')
+    const { crearDaoUsuarioMongo } = await import('../persistencia/mongo/daoUsuarioMongo.js')
     const cnxStr = getCnxStr()
     clienteMongo = crearClienteMongoDb(cnxStr)
     const dbMongo = await clienteMongo.conectar('DbUsuarios')
