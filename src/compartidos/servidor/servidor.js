@@ -1,7 +1,6 @@
 import express from 'express'
 import routerLibros from '../../libros/routeo/routerLibros.js'
 import { routerUsuario } from "../../libros/routeo/routerUsuarios.js";
-// import {crearRouterInfoLibro} from '../../libros/routeo/routerUsuarios.js'
 
 
 function crearServidor() {
@@ -12,11 +11,7 @@ function crearServidor() {
   
   app.use('/api/libros', routerLibros)
   
-  //Nuevo, Carlitos
   app.use('/api/Usuarios/', routerUsuario)
-  
-  // //Nuevo, Wei
-  // app.use('/api', crearRouterInfoLibro())
 
   let server = null
 

@@ -8,9 +8,10 @@
     "start": "set GOOGLE_APPLICATION_CREDENTIALS=C:/Users/nicol/Desktop/cred/milibro-5be72d2cfe2c.json&& nodemon ./test/compartidos/servidor/testServidorBuscarLibro.test.js",
     "test": "nodemon test/compartidos/servidor/testServidorInfoLibro.test.js",
     
+    "testDaoinfoLibro": "node test/compartidos/servidor/testUsuarioPersistencia.test.js",
+    
     "testServInfoLibro": "node test/compartidos/servidor/testServidorInfoLibro.test.js",
     "testCuInfoLibro": "node test/libros/negocio/testCasoDeUsoInfoLibro.test.js",
-    "testDaoinfoLibro": "node test/compartidos/servidor/testUsuarioPersistencia.test.js",
 
     "testServBusqAutor": "node test/compartidos/servidor/testServidorBuscarLibrosPorAutor.test.js",
     "testCuBusqAutor": "node test/libros/negocio/testCasoDeUsoBuscarLibrosPorAutor.test.js",

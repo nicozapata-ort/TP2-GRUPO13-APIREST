@@ -14,7 +14,7 @@ routerLibros.post('/', async (req, res, next) => {
     }
 })
 
-//Nuevo, Diana
+
 routerLibros.get('/porAutor', async (req, res, next) => {
   try {
       const CU_BuscarLibroPorAutor = crearCUBusquedaPorAutor()
