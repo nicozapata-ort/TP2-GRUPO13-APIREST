@@ -20,8 +20,6 @@ function crearDaoUsuarioMongo(dbMongo) {
 
       getByUsuarioId: async (id) => {
         const encontrado = await db.findOne({id: Number(id)})
-        console.log("DAO mongo", encontrado)
-        // return encontrado
         if(encontrado){
           return encontrado
         }else{

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { crearServidor } from '../../../src/compartidos/servidor/servidor.js'
-import DaoFactory from '../../../src/libros/persistencia/factoryDaoUsuario.js'
+// import factoryDaoUsuario from '../../../src/libros/persistencia/factoryDaoUsuario.js'
 import {cerrarConexion} from '../../../src/libros/persistencia/cleinteMongoCierre.js'
 
     const usuarios1 = {

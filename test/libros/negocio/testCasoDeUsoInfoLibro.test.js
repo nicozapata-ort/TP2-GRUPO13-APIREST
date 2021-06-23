@@ -1,6 +1,6 @@
 import CUFactoryInfoLibro from '../../../src/libros/negocio/factoryCuInfoLibro.js'
 import { crearBuscador } from "../../../src/libros/apis/buscadorDeLibros.js";
-import DaoFactory from '../../../src/libros/persistencia/factoryDaoUsuario.js'
+import factoryDaoUsuario from '../../../src/libros/persistencia/factoryDaoUsuario.js'
 // import {getClienteMongo} from '../../../src/libros/persistencia/factoryDaoUsuario.js'
 // const libroBuscado = {
 //     title : "Harry Potter 5 y la orden del Fénix",
@@ -33,5 +33,5 @@ try{
 
 // console.log("y aca?", DaoFactory.getClienteMongo())
 // const clienteMongo = await DaoFactory.getClienteMongo()
-const clienteMongo = await DaoFactory.getClienteMongo()
+const clienteMongo = await factoryDaoUsuario.getClienteMongo()
 clienteMongo.desconectar('DbUsuarios')
