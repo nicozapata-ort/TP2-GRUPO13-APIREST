@@ -22,15 +22,10 @@ function crearDaoFavoritos(dbMongo) {
                 await db.insertOne(lista)
             }
 
-            //await clienteMongo.desconectar()
 
         }
     }
 }
 
-// async function desconectarMongo() {
-//     await clienteMongo.desconectar()
-//     console.log('Mongo desconectado')
-// }
 
 export { crearDaoFavoritos }

@@ -4,9 +4,9 @@ import { crearServidor } from '../../../src/compartidos/servidor/servidor.js'
 
 
     const usuarios1 = {
-        id: 3,
-        nombre: 'cristina fernadez',
-        usuarioEmail: 'cristinafernandez@gmail.com'
+        id: 4,
+        nombre: 'nico zapa',
+        usuarioEmail: 'nicozapa@gmail.com'
     }
 
     const servidor = crearServidor()
