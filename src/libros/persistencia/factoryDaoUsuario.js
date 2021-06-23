@@ -5,7 +5,6 @@ let clienteMongo
 
 switch (getMode()) {
   case 'PROD':
-    console.log("FACTORY DAO - PRODUCCION")
     const { crearClienteMongoDb } = await import('./mongo/clienteMongo.js')
     const { crearDaoUsuarioMongo } = await import('../persistencia/mongo/daoUsuarioMongo.js')
     const cnxStr = getCnxStr()
@@ -15,7 +14,6 @@ switch (getMode()) {
     daoUsuarios = daoUsuarioMongo
     break;
   default:
-    console.log("FACTORY DAO - TEST")
     const { crearDaoUsuarioCache } = await import('./daoUsuarioCache.js')
     const daoUsuariosCache = crearDaoUsuarioCache()
     daoUsuarios = daoUsuariosCache

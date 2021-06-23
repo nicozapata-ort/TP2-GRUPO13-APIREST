@@ -19,7 +19,7 @@ import { crearBuscador } from "../../../src/libros/apis/buscadorDeLibros.js";
 //     infoLink: "http://books.google.com.ar/books?id=Qo5vvgEACAAJ&dq=Harry+Potter+y+la+Orden+del+F%C3%A9nix&hl=&source=gbs_api",
 // } 
 
-const idUsuario = 30
+const idUsuario = 3
 const resultado = await crearBuscador().libroPorAutor("ISAAC ASIMOV")
 const libroEjemplo = resultado[0]
 

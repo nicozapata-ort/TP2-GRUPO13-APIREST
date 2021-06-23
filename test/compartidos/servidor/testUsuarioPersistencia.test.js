@@ -4,9 +4,9 @@ import { crearServidor } from '../../../src/compartidos/servidor/servidor.js'
 import {cerrarConexion} from '../../../src/libros/persistencia/mongo/clienteMongoCierre.js'
 
     const usuarios1 = {
-        id: 1,
-        nombre: 'locura1',
-        usuarioEmail: 'locura1@gmail.com'
+        id: 3,
+        nombre: 'cristina fernadez',
+        usuarioEmail: 'cristinafernandez@gmail.com'
     }
 
     const servidor = crearServidor()

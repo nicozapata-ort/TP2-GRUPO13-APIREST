@@ -32,6 +32,7 @@ routerUsuario.post('/infoLibroPdfMail/:idUsuario', async (req, res, next) => {
 
 routerUsuario.post('/registrarUsuario', async (req, res, next) => {
     try {
+        console.log("route-user:",req.body)
         await cu_altaUsuario().cargar(req.body)
         res.json({ msg: 'ok usuario insertado' })
     } catch (err) {
@@ -41,7 +42,7 @@ routerUsuario.post('/registrarUsuario', async (req, res, next) => {
 
 
 routerUsuario.use((error, req, res, next) => {
-    if (error.type === 'ERROR_DATOS_INVALIDOS') {
+    if ((error.type === 'ERROR_DATOS_INVALIDOS') || (error.type === 'ERROR_FAVORITO_INVALIDO')) {
         res.status(400)
     } else if (error.type === 'ERROR_USUARIO_NO_ENCONTRADO') {
         res.status(404)
