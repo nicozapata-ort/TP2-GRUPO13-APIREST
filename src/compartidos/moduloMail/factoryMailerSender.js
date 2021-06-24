@@ -1,6 +1,6 @@
-import nodemailer from "nodemailer"; 
+import nodemailer from "nodemailer";
 import { crearGeneradorDatosMail } from '../../../src/compartidos/moduloMail/creadorDeMails.js'
-import {crearMailSender}  from   './mailSender.js'
+import { crearMailSender } from './mailSender.js'
 
 const testAccount = await nodemailer.createTestAccount();
 
@@ -11,17 +11,17 @@ const credenciales = {
 }
 
 function crearFactoryMailer_Sender() {
-        
-    return{
-            generarMail_sender: () => {
-                const sender = crearMailSender(credenciales)
-                return sender
-            },
-            generarDatosMail: () => {
-                const generadorDatosMail = crearGeneradorDatosMail()
-                return generadorDatosMail
-            }
-      } 
+
+    return {
+        generarMail_sender: () => {
+            const sender = crearMailSender(credenciales)
+            return sender
+        },
+        generarDatosMail: () => {
+            const generadorDatosMail = crearGeneradorDatosMail()
+            return generadorDatosMail
+        }
+    }
 }
 
 export { crearFactoryMailer_Sender }
