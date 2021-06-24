@@ -22,7 +22,7 @@ function crearBuscador() {  //nombre mas especifico
 
         libroPorAutor: async (autor) => {
             return new Promise((resolve, reject) => {
-                fetch(urlAPI + `?q=inauthor:${autor}`)
+                fetch(urlAPI + `?q=+inauthor:${autor}`)
                     .then(response => response.json())
                     .then(response => resolve(formatearLista(response)))
                     .catch(error => reject(error))
@@ -66,7 +66,7 @@ function formatoBook(book) {
     const losAtributosDelBook = {
         id: book.id,
         title: book.title,
-        authors: book.authors,
+        authors: book.authors[0],
         publishedDate: book.publishedDate,
         averageRating: book.averageRating,
         description: book.description,
@@ -88,6 +88,7 @@ function formatearLista(librosAPI) {
     while (i < maxBooks) {   // falta validacion de que haya libro
 
         const book = librosAPI.items[i].volumeInfo
+        book.id = librosAPI.items[i].id
         const bookFormateado = formatoBook(book)
         lista.push(bookFormateado)
 

@@ -9,7 +9,7 @@ await servidor.conectar(port)
 
 const autor = 'J. K. Rowling'
 
-const { data: resultado } = await axios.get(`http://localhost:${port}/api/libros/porAutor`, { autor: autor })
+const { data: resultado } = await axios.get(`http://localhost:${port}/api/libros/porAutor`,{params:{autor}})
 
 console.log(resultado)
 

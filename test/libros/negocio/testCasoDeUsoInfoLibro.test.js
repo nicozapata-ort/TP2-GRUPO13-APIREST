@@ -5,7 +5,7 @@ import factoryDaoUsuario from '../../../src/libros/persistencia/factoryDaoUsuari
 
 const resultado = await crearBuscador().libroPorAutor("ISAAC ASIMOV")
 const libroEjemplo = resultado[0]
-const idUsuario = 2
+const idUsuario = 4
 
 try{
     const CasoDeUso_infoLibroPorMail = CUFactoryInfoLibro.crearCU_enviarInfoLibro()
