@@ -108,5 +108,39 @@ ________________________________________________________________________________
 |_______|_______________________________________________________________________________________________|
 
 
+*********************************************************************************************************
+
+#BUSCAR LIBROS INGRESANDO NOMBRE DE AUTOR
+
+Debe recibir un recurso del siguiente estilo:
+
+{
+	autor: String
+}
+
+Nombre de la propiedad		Valor		Descripción
+autor				String		El usuario ingresa el nombre del autor/a de quien quiere recibir libros
+
+HTTP REQUEST
+
+GET       	    /api/libros/porAutor?q=inauthor:autor
+
+Nombre de la propiedad		Valor		Descripción
+listaLibros			array		Devuelve lista de 10 libros del autor/a ingresado por el usuario
+
+Si la petición sale como es debido devuelve un código 200 con un JSON con el mensaje de todo estuvo ok:
+
+{
+	message: ‘ok’
+}
+
+ERRORES
+
+Código	Descripción
+400	Se omitió o se envió mal el dato del autor, por ejemplo, vacío.
+404	No se encontró el recurso.
+500	Fallo interno del servidor, por ejemplo de comunicación con la API de Google Book que interviene en el método.
+
+
 
 
