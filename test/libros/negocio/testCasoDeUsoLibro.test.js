@@ -7,8 +7,8 @@ const reconocedorLibros = crearReconocedorDeTexto();
 
 const CU_buscarLibro = new CasoDeUso_BuscarLibro(reconocedorLibros, buscadorLibros)
 
-const datoRutaImagen = './src/compartidos/assets/alquimista3.jpg'
+const imagen = './src/compartidos/assets/portadas/sherlock.jpg'
 
-CU_buscarLibro.buscarLibro({ datoRutaImagen })
+CU_buscarLibro.buscarLibro({ imagen })
     .then(result => console.log(result))
     .catch(error => console.log(error))
