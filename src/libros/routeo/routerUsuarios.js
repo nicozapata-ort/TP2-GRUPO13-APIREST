@@ -32,7 +32,6 @@ routerUsuario.post('/infoLibroPdfMail/:idUsuario', async (req, res, next) => {
 
 routerUsuario.post('/registrarUsuario', async (req, res, next) => {
     try {
-        console.log("route-user:", req.body)
         await cu_altaUsuario().cargar(req.body)
         res.json({ msg: 'ok usuario insertado' })
     } catch (err) {
