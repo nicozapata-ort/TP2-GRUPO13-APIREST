@@ -2,14 +2,13 @@ import axios from 'axios'
 import { crearServidor } from '../../../src/compartidos/servidor/servidor.js'
 import fs from 'fs'
 import FormData from 'form-data'
-import { crearBuscador } from "../../../src/libros/apis/buscadorDeLibros.js";
 import { cerrarConexion } from '../../../src/libros/persistencia/mongo/clienteMongoCierre.js'
 
 const servidor = crearServidor()
 servidor.conectar(3000)
 
 const usuario1 = {
-    id: 12,
+    id: 15,
     nombre: 'diana wei fernandez',
     usuarioEmail: 'dianaweifernandez@gmail.com'
 }
