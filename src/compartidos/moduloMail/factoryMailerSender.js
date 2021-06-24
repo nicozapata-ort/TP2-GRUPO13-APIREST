@@ -3,6 +3,7 @@ import { crearGeneradorDatosMail } from '../../../src/compartidos/moduloMail/cre
 import {crearMailSender}  from   './mailSender.js'
 
 const testAccount = await nodemailer.createTestAccount();
+
 const credenciales = {
     host: 'smtp.ethereal.email',
     user: testAccount.user,
