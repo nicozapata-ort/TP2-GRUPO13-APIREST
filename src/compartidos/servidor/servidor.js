@@ -1,11 +1,15 @@
 import express from 'express'
 import routerLibros from '../../libros/routeo/routerLibros.js'
 import { routerUsuario } from "../../libros/routeo/routerUsuarios.js";
+import path from 'path'
 
+const __dirname = path.resolve(path.dirname(''))
 
 function crearServidor() {
   
   const app = express()
+
+  let server = null
   
   app.use(express.json())
   
@@ -13,7 +17,7 @@ function crearServidor() {
   
   app.use('/api/Usuarios/', routerUsuario)
 
-  let server = null
+  app.use('/static', express.static(path.join(__dirname, '/src/compartidos/assets')))
 
   return {
     conectar: (port) => {

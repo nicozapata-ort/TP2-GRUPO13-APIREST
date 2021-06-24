@@ -5,8 +5,6 @@ function crearRutaImagen(datoRuta){
 
     const existe = fs.existsSync(datoRuta);
 
-    console.log(datoRuta)
-
     if(!existe){
         throw crearErrorRutaInvalida('La ruta ingresada no contiene ningún archivo.')
     }

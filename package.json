@@ -7,21 +7,15 @@
   "scripts": {
     "start": "set GOOGLE_APPLICATION_CREDENTIALS=C:/Users/nicol/Desktop/cred/milibro-5be72d2cfe2c.json&& nodemon ./test/compartidos/servidor/testServidorBuscarLibro.test.js",
     "test": "nodemon test/compartidos/servidor/testServidorInfoLibro.test.js",
-    
-    "testDaoinfoLibro": "node test/compartidos/servidor/testUsuarioPersistencia.test.js",
-    
     "testServInfoLibro": "node test/compartidos/servidor/testServidorInfoLibro.test.js",
     "testCuInfoLibro": "node test/libros/negocio/testCasoDeUsoInfoLibro.test.js",
-
+    "testDaoinfoLibro": "node test/compartidos/servidor/testUsuarioPersistencia.test.js",
     "testServBusqAutor": "node test/compartidos/servidor/testServidorBuscarLibrosPorAutor.test.js",
     "testCuBusqAutor": "node test/libros/negocio/testCasoDeUsoBuscarLibrosPorAutor.test.js",
-
     "testServBuscarLibro": "node test/compartidos/servidor/testServidorBuscarLibro.test.js",
     "testCuBuscarLibro": "node test/libros/negocio/testCasoDeUsoLibro.test.js",
-
     "testServFavoritos": "node test/compartidos/servidor/testServidorAgregarFavorito.test.js",
     "testCuFavoritos": "node test/libros/negocio/testAgregarFavorito.test.js"
-
   },
   "keywords": [],
   "author": "",
@@ -34,9 +28,12 @@
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-form-data": "^2.0.17",
     "mongodb": "^3.6.9",
     "node-fetch": "^2.6.1",
     "nodemailer": "^6.6.1",
-    "pdfmake": "^0.1.71"
+    "pdfmake": "^0.1.71",
+    "form-data": "^4.0.0",
+    "multer": "^1.4.2"
   }
 }

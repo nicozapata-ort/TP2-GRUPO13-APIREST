@@ -1,5 +1,9 @@
 import vision from '@google-cloud/vision'
 
+import dotenv from 'dotenv'
+
+dotenv.config();
+
 function crearReconocedorDeTexto(){
     const client = new vision.ImageAnnotatorClient();
 

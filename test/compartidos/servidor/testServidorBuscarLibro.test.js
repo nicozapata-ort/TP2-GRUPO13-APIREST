@@ -1,15 +1,20 @@
 import axios from 'axios'
 import {crearServidor} from '../../../src/compartidos/servidor/servidor.js'
-
+import fs from 'fs'
+import FormData from 'form-data'
 
 const servidor = crearServidor()
 
 await servidor.conectar(3000)
 
-const rutaImagen = './src/compartidos/assets/alquimista3.jpg'
+const form = new FormData();
+const stream = fs.createReadStream('C:/Users/nicol/Desktop/portadasLibros/sherlock.jpg');
+form.append('image', stream);
+const formHeaders = form.getHeaders();
 
-const { data: resultado } = await axios.post('http://localhost:3000/api/libros', { datoRutaImagen: rutaImagen })
+await axios.post('http://localhost:3000/api/libros', form, { headers: { ...formHeaders } })
+            .then(resultado => console.log(resultado.data))
+            .catch(e => console.log(e.response.data))
 
-console.log(resultado)
 
 await servidor.desconectar()
