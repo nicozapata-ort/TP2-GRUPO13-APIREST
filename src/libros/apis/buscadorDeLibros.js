@@ -83,6 +83,7 @@ function formatearLista (librosAPI){
     while (i<maxBooks) {   // falta validacion de que haya libro
 
         const book = librosAPI.items[i].volumeInfo
+        book.id = librosAPI.items[i].id
         const bookFormateado = formatoBook(book)
         lista.push(bookFormateado)
         

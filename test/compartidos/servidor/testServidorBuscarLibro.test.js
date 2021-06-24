@@ -13,7 +13,7 @@ form.append('image', stream);
 const formHeaders = form.getHeaders();
 
 await axios.post('http://localhost:3000/api/libros', form, { headers: { ...formHeaders } })
-            .then(resultado => console.log(resultado.data))
+            .then(resultado => console.log(resultado))
             .catch(e => console.log(e.response.data))
 
 

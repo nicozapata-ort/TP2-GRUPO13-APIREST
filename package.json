@@ -15,7 +15,8 @@
     "testServBuscarLibro": "node test/compartidos/servidor/testServidorBuscarLibro.test.js",
     "testCuBuscarLibro": "node test/libros/negocio/testCasoDeUsoLibro.test.js",
     "testServFavoritos": "node test/compartidos/servidor/testServidorAgregarFavorito.test.js",
-    "testCuFavoritos": "node test/libros/negocio/testAgregarFavorito.test.js"
+    "testCuFavoritos": "node test/libros/negocio/testAgregarFavorito.test.js",
+    "testServEnConjunto": "node test/compartidos/servidor/testServidorEnConjunto.test.js"
   },
   "keywords": [],
   "author": "",
