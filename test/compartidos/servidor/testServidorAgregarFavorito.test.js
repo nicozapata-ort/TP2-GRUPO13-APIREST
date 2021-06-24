@@ -6,7 +6,7 @@ const server = crearServidor()
 const port = 3000
 try {
     await server.conectar(port)
-    const res = await axios.post(`http://localhost:${port}/api/Usuarios/2/Favoritos`, { id_libro: 'x3QQjwEACAAJ' })
+    const res = await axios.post(`http://localhost:${port}/api/Usuarios/3/Favoritos`, { id_libro: 'x3QQjwEACAAJ' })
     console.log(res.data)
     const serverDisconnect = await server.desconectar()
     // await desconectarMongo()

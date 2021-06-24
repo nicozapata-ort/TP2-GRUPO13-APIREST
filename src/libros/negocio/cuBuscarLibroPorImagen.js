@@ -5,10 +5,10 @@ function CasoDeUso_BuscarLibro(reconocedorLibros, buscadorLibros){
     this.reconocedorLibros = reconocedorLibros;
     this.buscadorLibros = buscadorLibros;
 
-    this.buscarLibro = async ({ datoRutaImagen }) => {
+    this.buscarLibro = async ({imagen}) => {
 
        //Verifico que la ruta ingresada sea valida
-        const ruta = crearRutaImagen(datoRutaImagen)
+        const ruta = crearRutaImagen(imagen)
 
         //Mando la ruta de la imagen para que se reconozca su texto
         const datosTextoDeImagen = await reconocedorLibros.reconocerPorTexto(ruta)
