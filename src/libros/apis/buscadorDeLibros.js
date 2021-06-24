@@ -66,7 +66,7 @@ function formatoBook(book) {
     const losAtributosDelBook = {
         id: book.id,
         title: book.title,
-        authors: book.authors[0],
+        authors: book.authors,
         publishedDate: book.publishedDate,
         averageRating: book.averageRating,
         description: book.description,
