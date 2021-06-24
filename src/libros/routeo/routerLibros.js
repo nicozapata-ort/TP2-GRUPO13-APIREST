@@ -21,14 +21,15 @@ routerLibros.post('/', upload.single('image'), async (req, res, next) => {
     }
 })
 
-//Nuevo, Diana
+
 routerLibros.get('/porAutor', async (req, res, next) => {
   try {
-      const CU_BuscarLibroPorAutor = crearCUBusquedaPorAutor()
-      const resultado = await CU_BuscarLibroPorAutor.buscarPorAutor(req.body)
-      res.status(201).json(resultado)
+    const CU_BuscarLibroPorAutor = crearCUBusquedaPorAutor()
+    const {autor} = req.query
+    const resultado = await CU_BuscarLibroPorAutor.buscarPorAutor(autor)
+    res.status(201).json(resultado)
   } catch (error) {
-      next(error);
+    next(error);
   }
 })
 

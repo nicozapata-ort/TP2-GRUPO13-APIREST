@@ -9,16 +9,16 @@ function crearServidor() {
   
   const app = express()
 
-  let server = null
-  
   app.use(express.json())
   
   app.use('/api/libros', routerLibros)
   
   app.use('/api/Usuarios/', routerUsuario)
-
+  
   app.use('/static', express.static(path.join(__dirname, '/src/compartidos/assets')))
-
+  
+  let server = null
+  
   return {
     conectar: (port) => {
       return new Promise((resolve, reject) => {

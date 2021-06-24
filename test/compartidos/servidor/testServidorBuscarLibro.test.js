@@ -8,7 +8,7 @@ const servidor = crearServidor()
 await servidor.conectar(3000)
 
 const form = new FormData();
-const stream = fs.createReadStream('C:/Users/nicol/Desktop/portadasLibros/sherlock.jpg');
+const stream = fs.createReadStream('./src/compartidos/assets/sherlock.jpg');
 form.append('image', stream);
 const formHeaders = form.getHeaders();
 

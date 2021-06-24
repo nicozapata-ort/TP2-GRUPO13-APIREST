@@ -9,7 +9,7 @@ function cu_altaUsuario(){
                 const daoUsuario =  DaoFactory.getDaoUsuarios()
                 const {guardado} = await daoUsuario.add(datoUsuario)
                 if(!guardado){
-                  throw new Error('ya existe un estudiante con ese id')
+                  throw new Error('ya existe un usuario con ese id')
                 }
             } catch(error) {
                 throw (error)
