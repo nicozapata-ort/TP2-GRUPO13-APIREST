@@ -5,7 +5,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "set GOOGLE_APPLICATION_CREDENTIALS=C:/Users/nicol/Desktop/cred/milibro-5be72d2cfe2c.json&& nodemon ./test/compartidos/servidor/testServidorBuscarLibro.test.js",
+    "start": "nodemon ./test/compartidos/servidor/testServidorBuscarLibro.test.js",
     "test": "nodemon test/compartidos/servidor/testServidorInfoLibro.test.js",
     "testServInfoLibro": "node test/compartidos/servidor/testServidorInfoLibro.test.js",
     "testCuInfoLibro": "node test/libros/negocio/testCasoDeUsoInfoLibro.test.js",
