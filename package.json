@@ -20,7 +20,7 @@
     "testCuBuscarLibro": "node test/libros/negocio/testCasoDeUsoLibro.test.js",
 
     "testServFavoritos": "node test/compartidos/servidor/testServidorAgregarFavorito.test.js",
-    "testCuFavoritos": "set GOOGLE_APPLICATION_CREDENTIALS=D:/ORT/TERCER_CUATRIMESTRE/TP_INTEGRADOR/KEY_FILE.json&& node test/libros/negocio/testAgregarFavorito.test.js"
+    "testCuFavoritos": "node test/libros/negocio/testAgregarFavorito.test.js"
 
   },
   "keywords": [],
